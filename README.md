@@ -1,5 +1,5 @@
-PUCALKA
-the game
+RedGad
+social platform
 
 <img src="http://i.imgur.com/sbat2Do.jpg" 
 alt="IMAGE ALT TEXT HERE" width="480" height="384" border="10" />
