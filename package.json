@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/Nephilim-Telerik/RedGag/issues"
   },
-  "homepage": "https://github.com/Nephilim-Telerik/RedGag#readme"
+  "homepage": "https://github.com/Nephilim-Telerik/RedGag#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "live-server": "^1.2.0",
+    "systemjs": "^0.20.12",
+    "systemjs-plugin-babel": "0.0.21"
+  }
 }
