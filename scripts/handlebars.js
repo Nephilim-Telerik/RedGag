@@ -25,7 +25,7 @@ function solve() {
             
             		<div class="rating">
                			<div class="rating-up"><h4><span class="glyphicon glyphicon-chevron-up"></h4></div>
-                		<div class="rating-result"><h4>+9</h4></div>
+                		<div class="rating-result"><h4>{{rating}}</h4></div>
                 		<div class="rating-down"><h4><span class="glyphicon glyphicon-chevron-down"></h4></div>
            			</div>
             		<div class="social"><i class="fa fa-facebook-square" style="font-size:32px;color:#fff;"></i></div>
