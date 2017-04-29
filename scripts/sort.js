@@ -91,4 +91,4 @@ function Trending() {
     recent.addEventListener("click", Recent);
     hot = document.getElementById("hot");
     hot.addEventListener("click", Hot);
-}
+};
