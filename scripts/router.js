@@ -1,5 +1,3 @@
-const masterContainer = $('#master-container');
-
 class Router {
     constructor() {
         this._routes = [];
@@ -48,14 +46,9 @@ class Router {
                 params[paramName] = currentUrlParts[i];
             }
         }
-        console.log(params);
 
         return params;
     }
 }
 
-const router = new Router();
-router
-    .on('/home', () => masterContainer.html('Home page'));
-
-$(window).on('hashchange', () => router.navigate());
+export { Router };
