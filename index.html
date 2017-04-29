@@ -1,117 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>RedGag</title>
+<head>
+<meta charset="UTF-8">
+<title>RedGag</title>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/navmenu.css">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./css/rating-style.css">
-        <link rel="stylesheet" href="./css/profile.css">      
-    </head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/navmenu.css">
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/rating-style.css">
+<link rel="stylesheet" href="./css/profile.css">
+
+
+</head>
 
 <body>
-    <div id="master-container">
-        <header>
-        <button type="button" id="register" class="btn btn-success">Register</button>
-        <button type="button" id="login" class="btn btn-default">Log in</button>
-        </header>
-
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger"></label>
-
-        <nav>
-            <button type="button" id="recent" class="btn btn-default">Recent</button>
-            <button type="button" id="hot" class="btn btn-default"></button>
-            <button type="button" id="trending" class="btn btn-default"></button>
-        </nav>
-
-        <article>
-            <!-- What we have to provide with js -->
-            <!-- Sample image post-->
-            <section>
-                <div>
-                    <div class="profile">
-                    </div>
-                    
-                    <div class="rating">
-                        <div class="rating-up"><h4><span class="glyphicon glyphicon-chevron-up"></h4></div>
-                        <div class="rating-result"><h4>+9</h4></div>
-                        <div class="rating-down"><h4><span class="glyphicon glyphicon-chevron-down"></h4></div>
-                    </div>
-                    <div class="social"><i class="fa fa-facebook-square" style="font-size:32px;color:#fff;"></i></div>
-                    </div>
-                
-                <div class="main-thread">
-                    <div class="main-content"><img style="width:100%"; src="./img/firstimg.jpg">
-                    </div>
-                    <div class="title"><h4>LE POST TITLE</h4>
-                    </div>
-                    <div class="comments">
-                        0 comments  340 views
-                    </div>
-                </div>
-        </section>
-        <!-- Sample status (text only) post-->
-        <section>
-                <div>
-                    <div class="profile">
-                    </div>
-                    
-                    <div class="rating">
-                        <div class="rating-up"><h4><span class="glyphicon glyphicon-chevron-up"></h4></div>
-                        <div class="rating-result"><h4>+9</h4></div>
-                        <div class="rating-down"><h4><span class="glyphicon glyphicon-chevron-down"></h4></div>
-                    </div>
-                    <div class="social"><i class="fa fa-facebook-square" style="font-size:32px;color:#fff;"></i></div>
-                    </div>
-                
-                <div class="main-thread">
-                    <div class="main-content-text">Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun
-                    </div>
-                    <div class="title"><h4>LE POST TITLE</h4>
-                    </div>
-                    <div class="comments">
-                        0 comments  340 views
-                    </div>
-                </div>
-        </section>
-        <!-- Sample video post-->
-        <section>
-                <div>
-                    <div class="profile">
-                    </div>
-                    
-                    <div class="rating">
-                        <div class="rating-up"><h4><span class="glyphicon glyphicon-chevron-up"></h4></div>
-                        <div class="rating-result"><h4>+9</h4></div>
-                        <div class="rating-down"><h4><span class="glyphicon glyphicon-chevron-down"></h4></div>
-                    </div>
-                    <div class="social"><i class="fa fa-facebook-square" style="font-size:32px;color:#fff;"></i></div>
-                    </div>
-                
-                <div class="main-thread">
-                    <div class="main-content"><video width="600"  controls>
-                        <source src="./video/cpu.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    </div>
-                    <div class="title"><h4>LE POST TITLE</h4>
-                    </div>
-                    <div class="comments">
-                        0 comments  340 views
-                    </div>
-                </div>
-        </section>
-        </article>
-
-        <aside>
-        </aside>
-    </div>
-    <script src="./scripts/router.js"></script>
+	<div id="master-container">
+		
+	</div>
+	<script src="./node_modules/handlebars/dist/handlebars.js"></script>
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
+	<script src="./scripts/handlebars.js"></script>
+	<script>
+	var array = {arr: [{text: true, img: false, video: false, rating: "+9", title: "text title", comments: "0 comments  340 views", mainContentText: "Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun"},
+				{text: false, img: true, video: false, rating: "+7", title: "image title", comments: "8 comments  40 views", src: "./img/firstimg.jpg"},
+				{text: false, img: false, video: true, rating: "-3", title: "video title", comments: "2 comments  3 views", src: "./video/cpu.mp4"}]};
+    var func = solve();
+    func(array);
+  </script>
+  <script src="./scripts/router.js"></script>
 </body>
 </html>
