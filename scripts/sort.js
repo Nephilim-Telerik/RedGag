@@ -1,5 +1,14 @@
+import { Solve } from "./handlebars.js";
+import { Likes } from "./likes.js";
+function Sort() {
+  
+  return function (array) {
+    var funcLike = Likes();
+    funcLike(array);
+var func = Solve();
 var i,j;
 var recent = document.getElementById("recent");
+console.log(recent);
 var hot = document.getElementById("hot");
 var trending = document.getElementById("trending");
 
@@ -24,7 +33,7 @@ function Recent() {
     hot.addEventListener("click", Hot);
     trending = document.getElementById("trending");
     trending.addEventListener("click", Trending);
-    var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
+    /*var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
     for(var i=0; i<likes.length; i=i+1)
     {
         likes[i].addEventListener("click", Like);
@@ -33,7 +42,8 @@ function Recent() {
     for(var i=0; i<dislike.length; i=i+1)
     {
         dislike[i].addEventListener("click", Dislike);
-    }
+    }*/
+    funcLike(array);
 }
 
 
@@ -68,7 +78,7 @@ function Hot() {
     recent.addEventListener("click", Recent);
     trending = document.getElementById("trending");
     trending.addEventListener("click", Trending);
-    var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
+    /*var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
     for(var i=0; i<likes.length; i=i+1)
     {
         likes[i].addEventListener("click", Like);
@@ -77,7 +87,8 @@ function Hot() {
     for(var i=0; i<dislike.length; i=i+1)
     {
         dislike[i].addEventListener("click", Dislike);
-    }
+    }*/
+    funcLike(array);
 }
 
 trending.addEventListener("click", Trending);
@@ -110,7 +121,7 @@ function Trending() {
     recent.addEventListener("click", Recent);
     hot = document.getElementById("hot");
     hot.addEventListener("click", Hot);
-    var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
+    /*var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
     for(var i=0; i<likes.length; i=i+1)
     {
         likes[i].addEventListener("click", Like);
@@ -119,5 +130,10 @@ function Trending() {
     for(var i=0; i<dislike.length; i=i+1)
     {
         dislike[i].addEventListener("click", Dislike);
-    }
+    }*/
+    funcLike(array);
 };
+  };}
+
+
+export{ Sort };

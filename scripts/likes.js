@@ -1,3 +1,6 @@
+function Likes() {
+  
+  return function (array) {
 var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
 
 for(var i=0; i<likes.length; i=i+1)
@@ -19,7 +22,7 @@ function Like(ev) {
             array.arr[i].rating = array.arr[i].rating + 1;
         }
     }
-     toChange.innerText = +toChange.innerText+1;
+     toChange.firstChild.innerText = +toChange.firstChild.innerText+1;
     if(isNeutral)
     {
         target.removeEventListener("click", Like)
@@ -53,7 +56,7 @@ function Dislike(ev) {
             array.arr[i].rating = array.arr[i].rating - 1;
         }
     }
-    toChange.innerText = +toChange.innerText-1;
+    toChange.firstChild.innerText = +toChange.firstChild.innerText-1;
    
     if(isNeutral)
     {
@@ -68,3 +71,7 @@ function Dislike(ev) {
     }
  
 }
+  };}
+
+
+export{ Likes };

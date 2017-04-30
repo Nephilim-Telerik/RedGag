@@ -1,21 +1,10 @@
-function solve() {
+function Solve() {
   
   return function (arr) {
 	
 
 	var htmlTemplate = `
-		<header>
-			<button type="button" id="register" class="btn btn-success">Register</button>
-			<button type="button" id="login" class="btn btn-default">Log in</button>
-		</header>
-		<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-		<label for="nav-trigger"></label>
-
-		<nav>
-    		<button type="button" id="recent" class="btn btn-default">Recent</button>
-    		<button type="button" id="hot" class="btn btn-default"></button>
-    		<button type="button" id="trending" class="btn btn-default"></button>
-		</nav>
+		
 		<article>
 			{{#each arr}}
 			<section>
@@ -82,4 +71,5 @@ function solve() {
   };
 };
 
-module.exports = solve;
+
+export{ Solve };

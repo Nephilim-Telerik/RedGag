@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>RedGag</title>
-
+<script src="./node_modules/systemjs/dist/system.js"></script>
+<script src="./system.config.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="./scripts/app.js"></script>	
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/navmenu.css">
 <link rel="stylesheet" href="./css/main.css">
@@ -18,26 +21,30 @@
 </head>
 
 <body>
+<header>
+			<button type="button" id="register" class="btn btn-success">Register</button>
+			<button type="button" id="login" class="btn btn-default">Log in</button>
+		</header>
+		<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+		<label for="nav-trigger"></label>
+
+		<nav>
+    		<button type="button" id="recent" class="btn btn-default">Recent</button>
+    		<button type="button" id="hot" class="btn btn-default"></button>
+    		<button type="button" id="trending" class="btn btn-default"></button>
+		</nav>
 	<div id="master-container">
 		
 	</div>
 	<script src="./node_modules/handlebars/dist/handlebars.js"></script>
 	<script src="./node_modules/jquery/dist/jquery.js"></script>
-	<script src="./scripts/handlebars.js"></script>
 	
 	<script>
-	var array = {arr: [{text: true, img: false, video: false, rating: 120, title: "text title", comments: "0 comments  340 views", mainContentText: "Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun", date: new Date("October 13, 2014 11:13:00")},
-				{text: false, img: true, video: false, rating: 13, title: "image title", comments: "8 comments  40 views", src: "./img/firstimg.jpg", date: new Date("December 10, 2015 11:13:00")},
-				{text: false, img: false, video: true, rating: 9, title: "video title", comments: "2 comments  3 views", src: "./video/cpu.mp4", date: new Date("October 13, 2016 11:13:00")},
-				{text: true, img: false, video: false, rating: 50, title: "text title", comments: "0 comments  340 views", mainContentText: "Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun", date: new Date("October 19, 2014 11:13:00")},
-				{text: false, img: true, video: false, rating: 60, title: "image title", comments: "8 comments  40 views", src: "./img/firstimg.jpg", date: new Date("December 19, 2015 11:13:00")},
-				{text: false, img: false, video: true, rating: 3, title: "video title", comments: "2 comments  3 views", src: "./video/cpu.mp4", date: new Date("October 19, 2016 11:13:00")}]};
-    
-	var func = solve();
-    func(array);
+		
+		System.import("./scripts/app.js");
+		
   </script>
-  <script src="./scripts/sort.js"></script>
-  <script src="./scripts/likes.js"></script>
-  <script src="./scripts/router.js"></script>
+  
+ 
 </body>
 </html>
