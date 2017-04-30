@@ -1,0 +1,30 @@
+{
+  "name": "red-gag",
+  "version": "1.0.0",
+  "description": "The newest hottest aplication\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DSPA \u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~application!",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nephilim-Telerik/RedGag.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Nephilim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nephilim-Telerik/RedGag/issues"
+  },
+  "homepage": "https://github.com/Nephilim-Telerik/RedGag#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "handlebars": "^4.0.7",
+    "jquery": "^3.2.1",
+    "live-server": "^1.2.0",
+    "systemjs": "^0.20.12",
+    "systemjs-plugin-babel": "0.0.21"
+  }
+}
