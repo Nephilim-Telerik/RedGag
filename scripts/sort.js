@@ -24,6 +24,16 @@ function Recent() {
     hot.addEventListener("click", Hot);
     trending = document.getElementById("trending");
     trending.addEventListener("click", Trending);
+    var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
+    for(var i=0; i<likes.length; i=i+1)
+    {
+        likes[i].addEventListener("click", Like);
+    }
+    var dislike = document.getElementsByClassName("glyphicon glyphicon-chevron-down");
+    for(var i=0; i<dislike.length; i=i+1)
+    {
+        dislike[i].addEventListener("click", Dislike);
+    }
 }
 
 
@@ -58,7 +68,16 @@ function Hot() {
     recent.addEventListener("click", Recent);
     trending = document.getElementById("trending");
     trending.addEventListener("click", Trending);
-
+    var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
+    for(var i=0; i<likes.length; i=i+1)
+    {
+        likes[i].addEventListener("click", Like);
+    }
+    var dislike = document.getElementsByClassName("glyphicon glyphicon-chevron-down");
+    for(var i=0; i<dislike.length; i=i+1)
+    {
+        dislike[i].addEventListener("click", Dislike);
+    }
 }
 
 trending.addEventListener("click", Trending);
@@ -91,4 +110,14 @@ function Trending() {
     recent.addEventListener("click", Recent);
     hot = document.getElementById("hot");
     hot.addEventListener("click", Hot);
+    var likes = document.getElementsByClassName("glyphicon glyphicon-chevron-up");
+    for(var i=0; i<likes.length; i=i+1)
+    {
+        likes[i].addEventListener("click", Like);
+    }
+    var dislike = document.getElementsByClassName("glyphicon glyphicon-chevron-down");
+    for(var i=0; i<dislike.length; i=i+1)
+    {
+        dislike[i].addEventListener("click", Dislike);
+    }
 };
