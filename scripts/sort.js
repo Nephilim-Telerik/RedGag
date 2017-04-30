@@ -8,7 +8,7 @@ function Sort() {
 var func = Solve();
 var i,j;
 var recent = document.getElementById("recent");
-console.log(recent);
+
 var hot = document.getElementById("hot");
 var trending = document.getElementById("trending");
 
