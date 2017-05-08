@@ -1,5 +1,6 @@
 import { Solve } from "./handlebars.js";
 import { Sort } from "./sort.js";
+import { saveToDb } from "./push.js";
 
 var posts;
 var promiseDataBasePosts = new Promise(function (resolve, reject) {
@@ -45,6 +46,16 @@ promiseDataBasePosts
       func(array);
       var x = Sort();
       x(array);
+
+      var obj = {
+                  name1: {namekon: 38}, 
+                  1: {text: true, img: false, video: false, rating: 120, title: "text title", comments: "0 comments  340 views", mainContentText: "Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun", date: new Date("October 13, 2014 11:13:00")},
+                  2: {text: false, img: true, video: false, rating: 13, title: "image title", comments: "8 comments  40 views", src: "./img/firstimg.jpg", date: new Date("December 10, 2015 11:13:00")}
+                }
+      var push = saveToDb();
+      push(obj);
+
+
         })
         .catch(function(error) {
             console.log(error);
