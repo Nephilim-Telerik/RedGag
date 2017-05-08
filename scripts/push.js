@@ -2,13 +2,16 @@
 
 function saveToDb() {
 
-    return function (obj) {
-    let i = 0;
-    i +=1;
-    var dbRefObject = firebase.database().ref().child('object');
-    //dbRefObject.child("name1").child("namekon").set(i);
+    return function (objectName, values) {
+var dbRefObject = firebase.database().ref().child('object');
+    for (var key in values) {
+         if (values.hasOwnProperty(key)) {
+           dbRefObject.child(objectName).child(key).set(values[key]);
+    }
+    }
 }
 };
 
 
 export{ saveToDb };
+
