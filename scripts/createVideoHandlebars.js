@@ -4,7 +4,7 @@ function SolveVideo() {
   
   return function (arra) {
 		var array = arra;
-
+var src;
 	var htmlTemplate = `
 		
 		<article>		
@@ -13,7 +13,14 @@ function SolveVideo() {
         			<div class="main-thread">
             			<div class="main-content-text">title:<input id = "title"></input>
 						<p></p>
-						src:<input id = "src">
+						<div id="uploaderDiv">
+        <progress value="0" max="100" id="uploader">0%</progress>
+        <input type="file" value="upload" id="fileButton" />
+        
+		<video width="50%" controls>
+  <source src="" type="video/mp4">
+  </video>
+</div>
 						<p></p>
 						<button type="button" id="post" >Post</button>
 						</div>        			
@@ -33,15 +40,56 @@ function SolveVideo() {
 	var title = document.getElementById("title");
 
 	
-	var src = document.getElementById("src");
+	// getting html elements
+var uploader = document.getElementById('uploader');
+var fileButton = document.getElementById('fileButton');
+
+//Listen for file selection
+fileButton.addEventListener('change', function(e){
+    //get file
+    var file = e.target.files[0];
+    
+    //create a storage ref
+    var storageRef = firebase.storage().ref('img/' + file.name);
+
+    // Upload file
+    var task = storageRef.put(file);
+   
+   
+
+    //Update progress bar
+    task.on('state_changed', 
+    function progress (snapshot) {
+            var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            uploader.value = percentage;              
+    },
+    function error(err) {
+
+    },
+    function complete() {
+        fileButton.style.visibility = 'hidden';
+        var url = storageRef.getDownloadURL().then(function(url) {
+             var test = url;
+             //alert(url);
+             document.querySelector('source').src = test;
+			 src = test;
+         }).catch(function(error) {
+
+         });
+	
+    });
+     
+});
+console.log(src);
 	
 
 	var pos = document.getElementById("post");
 	pos.addEventListener("click", postText);
 
 	function postText(ev) {
+		console.log(src);
 			var titleText = title.value;
-			var srcText = src.value;
+			var srcText = src;
 			var temp = "post";
 			var check = [];
 			var bool = false;
