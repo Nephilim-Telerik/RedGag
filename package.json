@@ -4,6 +4,7 @@
   "description": "The newest hottest aplication\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DSPA \u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~application!",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/.bin/live-server",
     "test": "test"
   },
   "repository": {
