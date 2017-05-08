@@ -2,6 +2,8 @@ import { Solve } from "./handlebars.js";
 import { Sort } from "./sort.js";
 import { saveToDb } from "./push.js";
 import { createPost } from "./createPost.js";
+import { createVideo } from "./createVideo.js";
+import { createImage } from "./createImage.js";
 
 $(document).ready(function () {
         var posts;
@@ -50,6 +52,10 @@ $(document).ready(function () {
               x(array);
               var y = createPost();
               y(array);
+              var z = createVideo();
+              z(array);
+              var u = createImage();
+              u(array);
 
               /*var obj = { 
                           post1: {text: true, img: false, video: false, id: "post1", rating: 120, title: "text title", comments: "0 comments  340 views", mainContentText: "Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun", date: new Date("October 13, 2014 11:13:00")}, post2: {text: false, img: true, video: false, id: "post1", rating: 13, title: "image title", comments: "8 comments  40 views", src: "./img/firstimg.jpg", date: new Date("December 10, 2015 11:13:00")}

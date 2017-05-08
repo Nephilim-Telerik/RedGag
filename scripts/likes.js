@@ -13,6 +13,8 @@ for(var i=0; i<likes.length; i=i+1)
 
 
 function Like(ev) {
+    
+
     let isNeutral = true;
     var target = ev.target;
     var toChange = target.parentNode.parentNode.nextElementSibling;
@@ -57,7 +59,7 @@ for(var i=0; i<dislike.length; i=i+1)
 
 function Dislike(ev) {
     let isNeutral = true;
-    var target = ev.target;;
+    var target = ev.target;
     var toChange = target.parentNode.parentNode.previousElementSibling;
     for(var i=0; i<array.arr.length; i=i+1)
     {
