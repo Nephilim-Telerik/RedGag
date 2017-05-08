@@ -49,3 +49,24 @@ promiseDataBasePosts
         .catch(function(error) {
             console.log(error);
     });
+
+//realtime db sync
+const dbRefObject2 = firebase.database().ref();
+
+dbRefObject2.on('child_changed', snap => {
+posts = JSON.parse(JSON.stringify(snap.val()));
+
+var array = {arr: []};
+      for (var i in posts)
+      {
+        console.log(posts[i]);
+        array.arr.push(posts[i]);
+      }
+
+	    var func = Solve();
+      func(array);
+      var x = Sort();
+      x(array);
+
+console.log(posts);
+});
