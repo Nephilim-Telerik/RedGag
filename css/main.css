@@ -55,6 +55,11 @@ section{
     float:right;
     margin-right:5px;
 }
+#createPost {
+    vertical-align: middle;
+    float:right;
+    margin-right:5px;
+}
 body{
     background-color: #e9eaed;
 }
