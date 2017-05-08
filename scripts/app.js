@@ -86,7 +86,7 @@ $(document).ready(function () {
         
         var app = Sammy('#master-container', function() {
         this.get('#/recent', function() {
-          
+          Recent();
         });
 
         this.get('#/top3', function() {

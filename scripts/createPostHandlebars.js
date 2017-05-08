@@ -46,7 +46,7 @@ function SolvePost() {
 			var check = [];
 			var bool = false;
 			for(var i=0; i<array.arr.length; i=i+1)
-    	{
+    		{
 				check.push(array.arr[i].id);
 			}
 
@@ -55,10 +55,11 @@ function SolvePost() {
 				for(var j = 0; j< check.length ; j = j + 1)
 				{
 					bool = true;
-					if(i == check[j][check[j].length-1])
+					var pp = check[j].match(/\d/g);
+					pp = pp.join("");
+
+					if(i == pp)
 					{
-						
-						
 						bool = false;
 						break;
 					}
@@ -70,6 +71,7 @@ function SolvePost() {
 					break;
 				}
 			}
+			
 			
 			
 			var objectToSend = { text: true, img: false, video: false, id: temp, rating: 0, title: titleText, comments: "0 comments  0 views", mainContentText: mainContentText1, date: Date.now()}

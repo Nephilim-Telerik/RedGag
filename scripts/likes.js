@@ -19,7 +19,7 @@ function Like(ev) {
    
     for(var i=0; i<array.arr.length; i=i+1)
     {
-        if(array.arr[i].rating=== +toChange.innerText)
+        if(array.arr[i].id=== target.id)
         {
             array.arr[i].rating = array.arr[i].rating + 1;
 
