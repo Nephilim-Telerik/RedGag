@@ -1,3 +1,5 @@
+import { saveToDb } from "./push.js";
+
 function Likes() {
   
   return function (array) {
@@ -20,6 +22,14 @@ function Like(ev) {
         if(array.arr[i].rating=== +toChange.innerText)
         {
             array.arr[i].rating = array.arr[i].rating + 1;
+
+            var objectName = array.arr[i].id;
+
+            
+            var push = saveToDb();
+            push(objectName, array.arr[i]);
+            
+            break;
         }
     }
      toChange.firstChild.innerText = +toChange.firstChild.innerText+1;
@@ -54,6 +64,14 @@ function Dislike(ev) {
         if(array.arr[i].rating=== +toChange.innerText)
         {
             array.arr[i].rating = array.arr[i].rating - 1;
+
+            var objectName = array.arr[i].id;
+
+            
+            var push = saveToDb();
+            push(objectName, array.arr[i]);
+            
+            break;
         }
     }
     toChange.firstChild.innerText = +toChange.firstChild.innerText-1;

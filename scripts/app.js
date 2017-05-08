@@ -47,13 +47,11 @@ promiseDataBasePosts
       var x = Sort();
       x(array);
 
-      var obj = {
-                  name1: {namekon: 38}, 
-                  1: {text: true, img: false, video: false, rating: 120, title: "text title", comments: "0 comments  340 views", mainContentText: "Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun", date: new Date("October 13, 2014 11:13:00")},
-                  2: {text: false, img: true, video: false, rating: 13, title: "image title", comments: "8 comments  40 views", src: "./img/firstimg.jpg", date: new Date("December 10, 2015 11:13:00")}
+      /*var obj = { 
+                  post1: {text: true, img: false, video: false, id: "post1", rating: 120, title: "text title", comments: "0 comments  340 views", mainContentText: "Hey guys I was just wondering if you could help me. I am trying to find a decent tutorial on how to connect js SPA apps to a database. Thanks ! #CodeIsFun", date: new Date("October 13, 2014 11:13:00")}, post2: {text: false, img: true, video: false, id: "post1", rating: 13, title: "image title", comments: "8 comments  40 views", src: "./img/firstimg.jpg", date: new Date("December 10, 2015 11:13:00")}
                 }
       var push = saveToDb();
-      push(obj);
+      push(obj);*/
 
 
         })
