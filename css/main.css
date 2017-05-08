@@ -60,13 +60,17 @@ section{
     float:right;
     margin-right:5px;
 }
+#createImage {
+    vertical-align: middle;
+    float:right;
+    margin-right:5px;
+}
+#createVideo {
+    vertical-align: middle;
+    float:right;
+    margin-right:5px;
+}
 body{
     background-color: #e9eaed;
 }
-a, a:link, a:visited, a:hover, a:active {
-    color:#fff;
-    text-decoration: none;
-}
-#login-link {
-    color: #000;
-}
+

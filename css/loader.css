@@ -1,0 +1,15 @@
+    #uploaderDiv {
+        display: flex;
+        min-height: 100px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;    
+    }
+    #uploader {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 50%;
+        margin-bottom: 10px;
+    }
