@@ -31,10 +31,8 @@ function SolvePost() {
     selected.innerHTML = postTemplate(array);
 
 	var title = document.getElementById("title");
-
 	
-	var mainContent = document.getElementById("mainContentText");
-	
+	var mainContent = document.getElementById("mainContentText");	
 
 	var pos = document.getElementById("post");
 	pos.addEventListener("click", postText);
@@ -70,18 +68,26 @@ function SolvePost() {
 					temp = temp + i ;
 					break;
 				}
-			}
-			
-			
-			
+			}							
 			var objectToSend = { text: true, img: false, video: false, id: temp, rating: 0, title: titleText, comments: "0 comments  0 views", mainContentText: mainContentText1, date: Date.now()}
 			arra.arr.push(objectToSend);
 			var push = saveToDb();
             push(temp, objectToSend);
 	}
-
   };
-};
+  //realtime db sync
+        const dbRefObject2 = firebase.database().ref();
 
+        dbRefObject2.on('child_changed', snap => {
+        posts = JSON.parse(JSON.stringify(snap.val()));
+
+        var array = {arr: []};
+              for (var i in posts)
+              {
+                array.arr.push(posts[i]);
+              }
+        console.log(posts);
+        });
+};
 
 export{ SolvePost };

@@ -1,12 +1,10 @@
 import { saveToDb } from "./push.js";
 
-function SolveImage() {
-  
+function SolveImage() {  
   return function (arra) {
 		var array = arra;
 var src;
-	var htmlTemplate = `
-		
+	var htmlTemplate = `		
 		<article>		
 			<section>
 				<div>
@@ -51,8 +49,6 @@ fileButton.addEventListener('change', function(e){
     // Upload file
     var task = storageRef.put(file);
    
-   
-
     //Update progress bar
     task.on('state_changed', 
     function progress (snapshot) {
@@ -113,9 +109,6 @@ fileButton.addEventListener('change', function(e){
 					break;
 				}
 			}
-			
-			
-			
 			var objectToSend = { text: false, img: true, video: false, id: temp, rating: 0, title: titleText, comments: "0 comments  0 views", src: srcText, date: Date.now()}
 			arra.arr.push(objectToSend);
 			var push = saveToDb();
@@ -123,7 +116,19 @@ fileButton.addEventListener('change', function(e){
 	}
 
   };
-};
+  //realtime db sync
+        const dbRefObject2 = firebase.database().ref();
 
+        dbRefObject2.on('child_changed', snap => {
+        posts = JSON.parse(JSON.stringify(snap.val()));
+
+        var array = {arr: []};
+              for (var i in posts)
+              {
+                array.arr.push(posts[i]);
+              }
+        console.log(posts);
+        });
+};
 
 export{ SolveImage };

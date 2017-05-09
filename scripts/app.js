@@ -83,10 +83,10 @@ $(document).ready(function () {
                 array.arr.push(posts[i]);
               }
 
-              var func = Solve();
+          /*    var func = Solve();
               func(array);
               var x = Sort();
-              x(array);
+              x(array); */
 
         console.log(posts);
         });

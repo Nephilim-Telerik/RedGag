@@ -18,8 +18,8 @@ var src;
         <input type="file" value="upload" id="fileButton" />
         
 		<video width="50%" controls>
-  <source src="" type="video/mp4">
-  </video>
+        <source src="" type="video/mp4">
+        </video>
 </div>
 						<p></p>
 						<button type="button" id="post" >Post</button>
@@ -53,10 +53,8 @@ fileButton.addEventListener('change', function(e){
     var storageRef = firebase.storage().ref('img/' + file.name);
 
     // Upload file
-    var task = storageRef.put(file);
+    var task = storageRef.put(file); 
    
-   
-
     //Update progress bar
     task.on('state_changed', 
     function progress (snapshot) {
@@ -80,8 +78,7 @@ fileButton.addEventListener('change', function(e){
     });
      
 });
-console.log(src);
-	
+console.log(src);	
 
 	var pos = document.getElementById("post");
 	pos.addEventListener("click", postText);
@@ -118,18 +115,26 @@ console.log(src);
 					temp = temp + i ;
 					break;
 				}
-			}
-			
-			
-			
+			}	
 			var objectToSend = { text: false, img: false, video: true, id: temp, rating: 0, title: titleText, comments: "0 comments  0 views", src: srcText, date: Date.now()}
 			arra.arr.push(objectToSend);
 			var push = saveToDb();
             push(temp, objectToSend);
 	}
-
   };
-};
+  //realtime db sync
+        const dbRefObject2 = firebase.database().ref();
 
+        dbRefObject2.on('child_changed', snap => {
+        posts = JSON.parse(JSON.stringify(snap.val()));
+
+        var array = {arr: []};
+              for (var i in posts)
+              {
+                array.arr.push(posts[i]);
+              }
+        console.log(posts);
+        });
+};
 
 export{ SolveVideo };
