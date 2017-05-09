@@ -43,11 +43,12 @@ function SolvePost() {
 			var temp = "post";
 			var check = [];
 			var bool = false;
+			console.log(array);
 			for(var i=0; i<array.arr.length; i=i+1)
     		{
 				check.push(array.arr[i].id);
 			}
-
+			console.log(check);
 			for(var i = 1; i< 50 ; i = i + 1)
 			{
 				for(var j = 0; j< check.length ; j = j + 1)
