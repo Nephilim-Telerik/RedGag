@@ -1,0 +1,13 @@
+#register-form, #login-form {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+h3 {
+    text-align: center;
+    padding: 0px 0px 5px 0px;
+}
