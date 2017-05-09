@@ -29,6 +29,7 @@ function UserController() {
             const password = passwordField.val();
 
             const promise = auth.createUserWithEmailAndPassword(email, password);
+            promise.then(() => window.location = '');
             promise.catch(ex => {
                 $(`
                     <div class="alert alert-warning alert-dismissable">
@@ -73,6 +74,7 @@ function UserController() {
             const password = passwordField.val();
 
             const promise = auth.signInWithEmailAndPassword(email, password);
+            promise.then(() => window.location = '');
             promise.catch(ex => {
                 $(`
                     <div class="alert alert-warning alert-dismissable">
