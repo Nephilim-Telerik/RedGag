@@ -3,7 +3,7 @@ function UserController() {
         const auth = firebase.auth();
 
         var registerTemplate = `
-            <div id="register-form" style="width: 350px">
+            <div id="register-form">
                 <p class="control-label"><h3>Register</h3></p>
                 <br>
                 <label for="email" class="control-label col-sm-2">Email:</label>
@@ -47,7 +47,7 @@ function UserController() {
         const auth = firebase.auth();
 
         var loginTemplate = `
-            <div id="login-form" style="width: 350px">
+            <div id="login-form">
                 <p class="control-label"><h3>Log in</h3></p>
                 <br>
                 <label for="email" class="control-label col-sm-2">Email:</label>
