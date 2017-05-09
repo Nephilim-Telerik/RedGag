@@ -55,6 +55,11 @@ section{
     float:right;
     margin-right:5px;
 }
+#logout {
+    vertical-align: middle;
+    float:right;
+    margin-right:5px;
+}
 #createPost {
     vertical-align: middle;
     float:right;
@@ -73,4 +78,10 @@ section{
 body{
     background-color: #e9eaed;
 }
-
+a, a:link, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+}
+#blacken-link {
+    color: #000;
+}
