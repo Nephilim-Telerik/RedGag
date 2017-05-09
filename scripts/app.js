@@ -11,15 +11,15 @@ $(document).ready(function () {
         var promiseDataBasePosts = new Promise(function (resolve, reject) {
           (function () {
             // Initialize Firebase
-            var config = {
-              apiKey: "AIzaSyAWgpPRCP49mlZbgFpEbH1AVf_otxQJlMc",
-              authDomain: "redgag-e9119.firebaseapp.com",
-              databaseURL: "https://redgag-e9119.firebaseio.com",
-              projectId: "redgag-e9119",
-              storageBucket: "redgag-e9119.appspot.com",
-              messagingSenderId: "243757547322"
-            };
-            firebase.initializeApp(config);
+  var config = {
+    apiKey: "AIzaSyABN1JEZy8Cpmy7hhgI_k7_-SscOpo-ewE",
+    authDomain: "nephilin-511f8.firebaseapp.com",
+    databaseURL: "https://nephilin-511f8.firebaseio.com",
+    projectId: "nephilin-511f8",
+    storageBucket: "nephilin-511f8.appspot.com",
+    messagingSenderId: "720321012350"
+  };
+  firebase.initializeApp(config);
 
             const dbRefObject = firebase.database().ref().child('object');
 
