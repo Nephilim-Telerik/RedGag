@@ -34,7 +34,8 @@ function UserController() {
                     <div class="alert alert-warning alert-dismissable">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <p><strong>Warning!</strong></p>
-                        <p>Such a user already exists.</p>
+                        <p>Email is invalid or</p>
+                        <p>such a user already exists.</p>
                         <p>Please, try again.</p>
                     </div>
                 `).insertAfter('#email-field');
