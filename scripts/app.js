@@ -4,6 +4,7 @@ import { saveToDb } from "./push.js";
 import { createPost } from "./createPost.js";
 import { createVideo } from "./createVideo.js";
 import { createImage } from "./createImage.js";
+import { UserController } from "./userController.js";
 
 $(document).ready(function () {
         var posts;
@@ -90,6 +91,7 @@ $(document).ready(function () {
         console.log(posts);
         });
         
+        var controller = UserController();
         var app = Sammy('#master-container', function() {
         this.get('#/recent', function() {
           Recent();
@@ -104,11 +106,15 @@ $(document).ready(function () {
         });
 
         this.get('#/login', function() {
-
+          controller.login();
         });
 
         this.get('#/register', function() {
+          controller.register();
+        });
 
+        this.get('#/logout', function() {
+          controller.logout();
         });
     });
     app.run('#/');
