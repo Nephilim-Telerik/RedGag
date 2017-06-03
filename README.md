@@ -1,17 +1,9 @@
-<h1>Video Rental Store</h1>
+# VideoRentalSystem
+generic video store db system 2017
 
-<img src="https://vignette2.wikia.nocookie.net/tinytower/images/b/bd/Video_Rental.png/revision/latest?cb=20130515011338" 
-alt="IMAGE ALT TEXT HERE" width="480" height="140" border="10" /><br>
+<img src="http://i.imgur.com/sbat2Do.jpg" 
+alt="IMAGE ALT TEXT HERE" width="480" height="384" border="10" />
 
-1. Commands <br>
-1.1.Create Commands <br><br>
---CreateCountry - params - Initials, Country Code.<br>
---CreateEmployee - params - First Name, Last Name, Salary, Manager Id.<br>
---CreateManager - params - First Name, Last Name, Salary.<br>
-<br>
-1.2. List Commands<br><br>
---ListAllCountries - no params -<br>
---ListAllEmployees - no params -<br>
-1.3. Termination<br><br>
---Exit<br>
-⋅⋅* Enjoy ! 
+1. JS SPA Application
+2. App Rules
+⋅⋅* Enjoy !
